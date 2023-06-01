@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Login</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="login.css"/>
+    </head>
+    <body>
+        <div class="box">
+            <div class="container" id="login-container">
+                <div class="header">
+                    <h1 class="heading">Login</h1>
+                </div>
+                <form id="credentials-form" class="relative" method="POST">
+                    <input type="text" name="username" id="username" placeholder="Enter username" class=""/>
+                </form>
+                <div id="button-container" class="flex">
+                    <button class="primary next-btn" id="Next">
+                        <span>Next</span> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="margin-left-2" viewBox="0 0 16 16">
+                            <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="center">
+                    <p class="register">Don't have an account?  
+                        <a class="link margin-left" href="">Don't Register</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <script src="login.js" type="module"></script>
+    </body>
+</html>

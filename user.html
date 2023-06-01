@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Register</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="user.css"/>
+    </head>
+    <body>
+        <section class="register-background">
+            <div class="register-box">
+                <div class="container" id="register-container">
+                    <header class="header">
+                        <h1 class="heading">Add Employee</h1>
+                    </header>
+
+                    <form class="relative" id="signup-form">
+                        <div class="flex-column">
+                            <h3>First Name</h3>
+                            <input type="text" name="firstName" id="firstName" placeholder="Enter first name" />
+                        </div>
+
+                        <div class="flex-column">
+                            <h3>Last Name</h3>
+                            <input type="text" name="lastName" id="lastName" placeholder="Enter last name" class="field"/>
+                        </div>
+
+                        <div class="flex-column">
+                            <h3>Date Of Birth</h3>
+                            <input type="date" name="dob" id="dob" class="field" />
+                        </div>
+                        
+                        <div class="flex-column">
+                            <h3>Designation</h3>
+                            <input type="text" name="designation" id="designation" placeholder="Enter designation" class="field"/>
+                        </div>
+
+                        <div class="flex-column">
+                            <h3>Email</h3>
+                            <input type="email" name="email" id="email" placeholder="Enter email" class="field"/>
+                        </div>
+
+                        <div class="flex-column">
+                            <h3>Username</h3>
+                            <input type="text" name="userName" id="userName" placeholder="Enter username" class="field"/>
+                        </div>
+
+                        <div class="flex-column">
+                            <h3>Password</h3>
+                            <input type="password" name="password" id="password" placeholder="Enter password" class="field"/>
+                        </div>
+
+                    </form>
+
+                    <div class="flex" id="btn">
+                        <button class="primary" name="submit" id="submit">
+                            Submit
+                        </button>
+                    </div>
+            </div>
+        </section>
+        
+        
+        <script src="user.js" type="module"></script>
+    </body>
+</html>

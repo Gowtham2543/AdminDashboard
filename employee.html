@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Employees</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="employee.css">
+    </head>
+    <body>
+
+        <section class="dashboard">
+          <div class="container">
+            <div class="header">
+              <h1 class="font-xxl">Employees</h1>
+              <div class="searchBar">
+                <input type="text" name="employee" id="employee" class="search" placeholder="Enter employee name">
+                <div class="btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-row" id="results">
+              <!-- Left Chevron -->
+              <div class="flex-column">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="chevron opacity-30" id="left-chevron-icon" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
+                </svg>
+              </div>
+              <!-- Card -->
+              <!-- <div class="flex-column" id="record">
+                <a href="profile.html">
+                  
+                  <div class="card">
+                    <p class="name">Mohamed Asif</p>
+                    <p class="   <div class="card">
+                    <p class="name">Mohamed Asif</p>
+                    <p class="role">DevOps Engineer</p>
+                  </div>role">DevOps Engineer</p>
+                  </div>
+                  
+                </a>
+                
+              </div> -->
+              <!-- Right Chevron -->
+              <div class="flex-column" id="right-chevron">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="chevron" id="right-chevron-icon" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Page Number
+            <div class="center">
+              <p class="font-grey">Page 1 / 10</p>
+            </div> -->
+            
+          </div>
+        </section>
+        
+        <script src="employee.js" type="module"></script>
+    </body>
+</html>

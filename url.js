@@ -1,0 +1,1 @@
+export const server = 'http://crafty2543.pythonanywhere.com'

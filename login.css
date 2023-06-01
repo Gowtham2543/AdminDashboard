@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    background-color: #0A4D68;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+
+    /* background-image: linear-gradient(to bottom right, white, black); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 10px 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+.home-container {
+    overflow: hidden;
+    /* background: #000; */
+    height: 100vh;
+}
+
+.home-background {
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    /* object-fit: fill; */
+}
+
+.login-background {
+}
+
+.padding-x-10{
+    padding-right: 10px;
+} 
+.padding-y-5{
+    padding: 0px 5px;
+}
+
+.navbar {
+    background-color: white;
+    /* filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)); */
+    border: 2px solid rgb(226 232 240);
+    border-radius: 0px 0px 10px 10px;
+    border-top: none;
+    position: fixed;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    z-index: 100;
+    
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    margin-top: 10px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+.primary, .secondary {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #00337C;
+    border-radius: 5px;
+    cursor: pointer;
+    /* margin: 2px 6px; */
+}
+
+.primary {
+    background-color: #00337C;
+    color: white;
+    padding: 5px 22px;
+}
+.secondary {
+    padding: 5px 10px;
+    border-width: 2px;
+}
+
+.primary:hover {
+    background-color: white;
+    border: 2px solid rgb(71 85 105);
+    color: black;
+    transition-delay: 100ms;
+}
+    
+.secondary:hover {
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+
+.text-large {
+    font-size: 1.125rem; 
+    line-height: 1.75rem; 
+}
+
+.flex {
+    display: flex;
+    justify-content: end;
+    /* padding: 20px 20px; */
+    flex-direction: row;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.nav-items {
+    margin: auto 0px;
+}
+
+.nav-item {
+    border-radius: 10px;
+    align-items: center;
+    padding: 10px;
+    font-size: large;
+    margin: 2px 12px;
+}
+.nav-item:hover {
+    background-color: rgb(243 244 246);
+    cursor: pointer;
+}
+
+/* Login Page */
+.box {
+    margin: 25px auto;
+    border-radius: 0px 20px 0px 20px;
+    width: 30%;
+    /* height: 100%; */
+    border: 2px solid rgb(203 213 225);
+    z-index: 999;
+    background-color: white;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgb(203 213 225);
+    margin-top:  30px;
+}
+
+.z8{
+    z-index: 999;
+}
+
+.container {
+    background: linear-gradient(45deg, #1C82AD, #03C988);
+    border-radius: 0px 20px 0px 20px;
+    padding: 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.next-btn {
+    display: flex;
+    align-items: center;
+    font-size: large;
+    padding: 5px 10px;
+}
+
+.back-btn {
+    font-size: large;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    /* padding: 5px 10px; */
+}
+
+.next-btn:hover {
+    background-color: white;
+    border: 2px solid rgb(71 85 105);
+    color: black;
+    transition-delay: 100ms;
+}
+
+.margin-left-2 {
+    margin-left: 2px;
+}
+
+.margin-left-5 {
+    margin-left: 5px;
+}
+
+.heading {
+    font-size: xx-large;
+}
+
+#button-container {
+    margin-top: 180px;
+}
+
+.register {
+    font-size: medium;
+    /* padding-top: 15px;   */
+    margin-top: 20px;
+}
+
+.link {
+    color:#00337C;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.relative {
+    position: relative;
+}
+
+
+
+.move-out-left {
+    animation-name: move-out-left;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.move-in-right {
+    animation-name: move-in-right;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.move-reverse {
+    animation-direction: reverse;
+}
+
+.animation-delay {
+    animation-delay: 500ms;
+}
+
+.move-in-left {
+    animation-name: move-in-left;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.move-out-right {
+    animation-name: mov;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.shake {
+    animation: shake;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+}
+
+/* Login  */
+#username, #password {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(203 213 225);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: large;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#password {
+    transform: translate(500%, 0%); 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#username:focus, #password:focus {
+    outline: 1px solid black;
+}
+
+#status {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#train-image {
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes move-out-left {
+    0% {transform: translate(0%, 0%); opacity: 1;}
+    17% { opacity: 0; display: none;}
+    100% {transform: translate(-500%, -0%); opacity: 0;}
+}
+
+@keyframes move-in-right {
+    0% {transform: translate(-500%, 0%); opacity: 0;}
+    83% { opacity: 0; display: static;}
+    100% {transform: translate(-0%, -0%); opacity: 1;}
+}
+
+@keyframes move-in-left {
+    0% {transform: translate(500%, 0%); opacity: 0;}
+    83% {opacity: 0; display: none;}
+    100% {transform: translate(-0%, -0%); opacity: 1;}
+}
+
+@keyframes mov {
+    0% {transform: translate(0%, 0%); opacity: 1;}
+    17% {opacity: 0; display: none;}
+    100% {transform: translate(500%, 0%); opacity: 0;}
+}
+
+@keyframes shake {
+    /* height: 100vw; */
+    0% {transform: translate(0%, 0%);}
+    20% {transform: translate(-5%, 0%);}
+    40% {transform: translate(5%, 0%);}
+    60% {transform: translate(-5%, 0%);}
+    80% {transform: translate(5%, 0%);}
+    100% {transform: translate(0%, 0%);}
+}
+
