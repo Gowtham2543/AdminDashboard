@@ -6,6 +6,6 @@ This is the source code for the Admin Dashboard.
 
 Mobile Application : https://github.com/Gowtham2543/SmartAttendance 
 
-Backend: https://github.com/G-Balamurugan/Smart_Attendance   
+Backend : https://github.com/G-Balamurugan/Smart_Attendance   
 
 
