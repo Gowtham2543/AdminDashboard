@@ -126,7 +126,6 @@ const addSubmitButton = () => {
 
 const sendFormData = () => {
     return new Promise( (resolve, reject) => {
-        console.log("Hello")
         var xhr = new XMLHttpRequest();
         xhr.open("POST", `${server}/login`); 
     
