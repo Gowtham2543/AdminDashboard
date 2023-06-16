@@ -20,9 +20,18 @@ button {
     background: none;
 }
 
+.back-btn {
+    /* margin-left: -100px; */
+    margin-bottom: 100px;
+    color: white;
+}
+
+.font-large {
+    font-size: x-large;
+}
+
 
 .register-background {
-    /* background-image: linear-gradient(to bottom right,rgb(49 46 129), black); */
     background-repeat: repeat;
     padding: 5px;
 }
@@ -160,11 +169,7 @@ input {
 /* Login Page */
 .box, .register-box {
     margin: 50px auto;
-    border-radius: 0px 20px 0px 20px;
-    width: 30%;
-    border: 2px solid rgb(203 213 225);
     z-index: 999;
-    background-color: white;
 }
 
 .register-box {
@@ -179,6 +184,7 @@ input {
     padding: 50px;
     background: linear-gradient(45deg, #1C82AD, #03C988);;
     border-radius: 0px 20px 0px 20px;
+    border: 2px solid rgb(203 213 225);
 }
 
 .header {
@@ -190,13 +196,7 @@ input {
 }
 
 
-.back-btn {
-    font-size: large;
-    display: flex;
-    align-items: center;
-    padding: 5px 10px;
-    /* padding: 5px 10px; */
-}
+
 
 #btn {
     margin-top: 20px;
