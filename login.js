@@ -148,12 +148,12 @@ const sendFormData = () => {
         xhr.onload = function(event){ 
             console.log(xhr.response)
             const res = JSON.parse(xhr.response)  
-            localStorage.setItem('token', res.access_token)
             
             const statusCode = xhr.status
             const statusMsg = res.status
-
+            
             if (statusCode == 200) {
+                localStorage.setItem('token', res.access_token)
                 resolve(statusCode)
             } else {
                 reject(statusMsg)
@@ -196,5 +196,7 @@ document.getElementById('username').onkeydown = (event) => {
     if (event.key == 'Enter') {
         event.preventDefault()
         nextPage()
+    } else if (event.key == 'Tab') {
+        event.preventDefault()
     }
 }

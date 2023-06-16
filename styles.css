@@ -27,6 +27,15 @@ a {
     /* padding: 50px; */
 }
 
+.logout-container {
+    width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: end;
+}
+
+
+
 .container {
     background: linear-gradient(45deg, #1C82AD, #03C988);
     border: 1px solid rgb(31 41 55);
@@ -70,6 +79,20 @@ a {
 .flex-column {
     display: flex;
     flex-direction: column;
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    gap: 10px;
+    font-size: x-large;
+}
+
+.logout:hover {
+    opacity: 60%;
 }
 
 .smallText {

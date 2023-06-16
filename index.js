@@ -78,30 +78,13 @@ const checkIfLoggedIn = () => {
     }
 }
 
+const logout = () => {
+    localStorage.clear()
+    window.location.href = 'login.html'
+}
+
 // Main
 checkIfLoggedIn()
 addSearchButtonListener()
+document.querySelector('.logout').addEventListener('click', logout)
 
-
-// Response
-    // {
-    //     "employee_list": [
-    //         {
-    //             "designation": "Manager",
-    //             "employee_name": "SivaGuru"
-    //         },
-    //         {
-    //             "designation": "Manager",
-    //             "employee_name": "Balamurugan"
-    //         },
-    //         {
-    //             "designation": "Manager",
-    //             "employee_name": "Balamurugan_32232"
-    //         },
-    //         {
-    //             "designation": "Manager",
-    //             "employee_name": "Balamurugan_32232_767766"
-    //         }
-    //     ],
-    //     "total_pages": 1
-    // }
