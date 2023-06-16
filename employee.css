@@ -179,3 +179,58 @@ input {
 ::-webkit-scrollbar-thumb:hover {
   opacity: 200%;
 }
+
+@media only screen and (max-width: 768px) {
+  .outer-container {
+    width: 350px;
+  }
+
+  .container {
+    margin-bottom: 300px;
+    padding: 50px 0px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+  }
+
+  .searchBar {
+    margin-top: 10px;
+    width: auto;
+  }
+
+  .search {
+    width: 100px;
+  }
+
+  /* #right-chevron, #left-chevron {
+    display: none;
+  } */
+
+  .chevron {
+    height: 100px;
+    width: 50px;
+  }
+
+  #results {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+  }
+
+  #employee {
+    font-size: x-small;
+  }
+
+  .card {
+    width: 150px;
+  }
+
+  .center {
+    margin-top: 50px;
+  }
+}
