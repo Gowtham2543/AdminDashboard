@@ -217,7 +217,7 @@ const saveDetails = () => {
     const details = detailList.map((detail) => detail?.value ?? detail.textContent)
     
     if (!isUpdated(details)) {
-        alert("Nothing to update, idiot!")
+        alert("Nothing to update")
 
     } else {
         const formData = new FormData();
