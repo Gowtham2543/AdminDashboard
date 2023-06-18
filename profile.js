@@ -1,3 +1,5 @@
+import {server} from './url.js';
+
 const initializeProfile = () => {
     var info = localStorage.getItem('employeeDetails')
     info = JSON.parse(info)
@@ -17,20 +19,27 @@ const initializeProfile = () => {
     const details = document.createElement('div')
     details.classList.add('details')
 
+    let saveDetails = document.createElement('button')
+    saveDetails.classList.add('save')
+    saveDetails.textContent = 'Save Details'
+    details.append(saveDetails)
+
 
     var centerDiv = document.createElement('div')
     centerDiv.classList.add('center')
     centerDiv.classList.add('mb-20')
-
+    
     var container = document.createElement('div')
     container.classList.add('flex-row')
     container.classList.add('font-large')
-
+    
     var field = document.createElement('p')
     field.classList.add('field')
+    field.classList.add('eid')
     field.textContent = "EID : "
     var value = document.createElement('p')
     value.textContent = info.emp_id
+    value.classList.add('value')
     container.appendChild(field)
     container.appendChild(value)
 
@@ -52,9 +61,9 @@ const initializeProfile = () => {
     field.classList.add('field')
     field.textContent = "First Name"
     // Value
-    value = document.createElement('p')
+    value = document.createElement('input')
     value.classList.add('value')
-    value.textContent = info.first_name
+    value.value = info.first_name
     container.appendChild(field)
     container.appendChild(value)
     column.appendChild(container)
@@ -64,9 +73,9 @@ const initializeProfile = () => {
     field = document.createElement('p')
     field.classList.add('field')
     field.textContent = "Last Name"
-    value = document.createElement('p')
+    value = document.createElement('input')
     value.classList.add('value')
-    value.textContent = info.last_name
+    value.value = info.last_name
     container.appendChild(field)
     container.appendChild(value)
     column.appendChild(container)
@@ -75,9 +84,9 @@ const initializeProfile = () => {
     field = document.createElement('p')
     field.classList.add('field')
     field.textContent = "DOB"
-    value = document.createElement('p')
+    value = document.createElement('input')
     value.classList.add('value')
-    value.textContent = info.dob
+    value.value = info.dob
     container.appendChild(field)
     container.appendChild(value)
     column.appendChild(container)
@@ -90,9 +99,9 @@ const initializeProfile = () => {
     field = document.createElement('p')
     field.classList.add('field')
     field.textContent = "Designation"
-    value = document.createElement('p')
+    value = document.createElement('input')
     value.classList.add('value')
-    value.textContent = info.designation
+    value.value = info.designation
     container.appendChild(field)
     container.appendChild(value)
     anotherColumn.appendChild(container)
@@ -101,9 +110,9 @@ const initializeProfile = () => {
     field = document.createElement('p')
     field.classList.add('field')
     field.textContent = "Age"
-    value = document.createElement('p')
+    value = document.createElement('input')
     value.classList.add('value')
-    value.textContent = info.age
+    value.value = info.age
     container.appendChild(field)
     container.appendChild(value)
     anotherColumn.appendChild(container)
@@ -112,11 +121,11 @@ const initializeProfile = () => {
     field = document.createElement('p')
     field.classList.add('field')
     field.textContent = "Email"
-    value = document.createElement('p')
+    value = document.createElement('input')
     value.classList.add('value')
     value.classList.add('w-270')
     value.classList.add('mb-5')
-    value.textContent = info.email
+    value.value = info.email
     container.appendChild(field)
     container.appendChild(value)
     anotherColumn.appendChild(container)
@@ -156,5 +165,78 @@ const checkIfLoggedIn = () => {
     }
 }
 
+const sendFormData = (formData) => {
+    return new Promise( function (resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', `${server}/employee_details_update`); 
+    
+        // This fires up when the connection is successful
+        xhr.onload = function(event){ 
+            const res = JSON.parse(xhr.response)
+            console.log(xhr.response)
+    
+            var statusMessage = res.status ? res.status : res.msg
+    
+            if (xhr.status == 200) {
+                resolve(xhr.status)
+            } else {
+                reject(statusMessage)
+            }
+        }; 
+    
+        var token = localStorage.getItem('token')
+        token = `Bearer ${token}`
+        
+        
+        xhr.setRequestHeader('Authorization', token)
+        xhr.send(formData);
+    })
+}
+
+
+const isUpdated = (details) => {
+    details.sort()
+
+    let data = JSON.parse(localStorage.getItem('employeeDetails'))
+    data = Object.values(data).sort()
+
+    const match = data.filter((currentItem, index) => 
+        {
+            return data[index] == details[index]
+        }
+     )
+
+     console.log("Matched", match);
+    return match.length != data.length
+
+}
+
+const saveDetails = () => {
+    const values = document.querySelectorAll('.value');    
+    const detailList = [...values]
+    const details = detailList.map((detail) => detail?.value ?? detail.textContent)
+    
+    if (!isUpdated(details)) {
+        alert("Nothing to update, idiot!")
+
+    } else {
+        const formData = new FormData();
+        formData.set('empId', values[0].textContent) 
+        formData.set('firstName', values[1].value)
+        formData.set('lastName', values[2].value)
+        formData.set('date', values[3].value)
+        formData.set('designation', values[4].value)
+        formData.set('age', values[5].value)
+        formData.set('email', values[6].value)
+    
+        sendFormData(formData).then(() => alert('Data Sent!'))
+    }
+
+    
+
+}
+
 checkIfLoggedIn()
 initializeProfile()
+
+document.querySelector('.save').addEventListener('click', saveDetails)

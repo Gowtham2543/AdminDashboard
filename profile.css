@@ -15,6 +15,32 @@ a {
     color: black;
 }
 
+input {
+  border: none;
+  background: transparent;
+  color: black;
+  outline: none;
+}
+
+.save {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: linear-gradient(45deg, #1C82AD, #03C988);
+  padding: 10px 15px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+
+.save:hover {
+    transform: scale(1.1);
+    opacity: 90%;
+}
+
 .dashboard {
     margin: 80px 0px;
     display: flex;
@@ -40,6 +66,7 @@ a {
 }
 
 .details {
+    position: relative;
     background: linear-gradient(45deg, #1C82AD, #03C988);
     padding: 80px 50px 30px 50px;
     width: 100%;
@@ -61,6 +88,10 @@ a {
 }
 
 .value {
+    font-size: x-large;
+}
+
+.eid {
     font-size: x-large;
 }
 
