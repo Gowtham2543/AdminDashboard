@@ -27,6 +27,11 @@ input {
 .back-btn {
   /* margin-left: -100px; */
   color: white;
+  transition-duration: 150ms;
+}
+
+.back-btn:hover {
+  opacity: 60%;
 }
 
 .font-large {

@@ -63,12 +63,14 @@ a {
   align-items: center;
   justify-content: center;
   gap: 16px;
+  cursor: pointer;
+  transition-duration: 300ms;
 }
 
 .btn:hover {
   filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1))
     drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
-  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .font-xxl {
@@ -88,10 +90,12 @@ a {
   cursor: pointer;
   gap: 10px;
   font-size: x-large;
+  transition-duration: 150ms;
 }
 
 .logout:hover {
   opacity: 60%;
+  transform: translateX(5px);
 }
 
 .smallText {
